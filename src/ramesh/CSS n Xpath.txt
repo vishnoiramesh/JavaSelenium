@@ -1,0 +1,68 @@
+In CSS, pattern-matching rules determine which style should be applied to elements in
+the DOM. These patterns, called selectors, may range from simple element names to rich
+contextual patterns. If all conditions in the pattern are true for a certain element, the selector
+matches the element and the browser applies the defined style in CSS syntax.
+Selenium WebDriver uses same principles of CSS selectors to locate elements in DOM. This is
+a much faster and more reliable way to locate the elements when compared with XPaths.
+
+CSS:
+1. WebElement userName = driver.findElement(By.cssSelector("html body div div form input"));
+2. WebElement userName = driver.findElement(By.cssSelector("input")); //tag name
+3. WebElement loginButton = driver.findElement(By.cssSelector("input.login")); // tag and class name
+4. WebElement loginButton = driver.findElement(By.cssSelector(".login")); //class name.
+5. WebElement userName = driver.findElement(By.cssSelector("input#username")); // tag and id
+6. WebElement userName = driver.findElement(By.cssSelector("#username")); // id
+7. WebElement userName = driver.findElement(By.cssSelector("input[name=username]")); // tag and attribute
+8. WebElement previousButton = driver.findElement(By.cssSelector("input[type='submit'][value='Login']")); // 2 attributes.
+9. List<WebElement> imagesWithoutAlt = driver.findElements(By.cssSelector("img:not([alt])")); // not operator.
+
+CSS Partial Match:
+^= 		input[id^='ctrl'] 			Starting with:
+$= 		input[id$='_userName'] 		Ending with:
+*= 		Input[id*='userName'] 		Containing:
+
+
+XPATH:
+XPath, the XML path language, is a query language for selecting nodes from an XML document
+
+1. WebElement userName = driver.findElement(By.xpath("html/body/div/div/form/input")); // Complete path.
+2. WebElement userName = driver.findElement(By.xpath("//input")); // Relative path to current node 
+3. WebElement userName = driver.findElement(By.xpath("//input[2]")); // Second Input, using predicate or filter.
+4. WebElement userName = driver.findElement(By.xpath("//input[@id='username']")); // Attribute
+5. input[starts-with(@id,'ctrl')]
+6. input[ends-with(@id,'_userName')]
+7. Input[contains(@id,'userName')]
+8. Input[contains(text(),'userName')] OR Input[contains(.,'userName')] OR Input[contains(.='userName')]
+9. WebElement userName = driver.findElement(By.xpath("//input[@*='username']"))// Any attribute (like name, id etc.) = value.
+10. Axis::Node[Predicate]
+11. //td[text()='Product1']/ancestor::table
+12. //table/descendant::td/input
+13. //td[text()='Product1']/following::tr
+14. //td[text()='Product1']/following-sibling::td
+15. //td[text()='$150']/preceding::tr
+16. //td[text()='$150']/preceding::tr
+17. //td[text()='$150']/preceding-sibling::td
+18. WebElement cell = driver.findElement(By.cssSelector("td:contains('Item 1')")); // Locate by text
+
+
+=======================================================================================================
+
+Why Framework?
+Script-less representation of Automated tests- Complexity is consumed by expert test engineers at top level classes.
+Other testers can write business flow with no need to learn deep technology.
+
+Data Driven tests- Same test can be executed with various inputs.
+
+Concise Reporting- Required for analysis and tracking.
+
+Standard Scripting and Team Consistency- Everyone follows the same style.
+
+Encapsulation from Complexities- Complexity is consumed by expert test engineers at top level classes.
+Other testers can write business flow with no need to learn deep technology.
+
+Implement and Maximize Re-Usability- Common and shared utilities are defined once and reused at multiple times.
+
+===========================================================================================================
+
+http://toolsqa.com/selenium-webdriver/factory-design-principle-in-frameworks/
+

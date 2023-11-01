@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >  
+<suite name="MySuite" verbose="1" >
+
+<parameter name ="objectMapFile" value ="C:/Radical/Workspace/Practice/Resources/propertiesFile.properties" />
+<parameter name ="testDataFile" value ="C:/Radical/Workspace/Practice/Resources/dataFile.xlsx" />
+<parameter name ="browser" value ="C:/Program Files (x86)/Mozilla Firefox/firefox.exe" />
+<parameter name ="profile" value ="C:/Users/rakumar/AppData/Roaming/Mozilla/Firefox/Profiles/z4x6n2dc.default" />
+<parameter name ="chromeDriver" value ="C:/Radical/chromedriver_linux32" />
+<parameter name ="url" value ="http://www.wufoo.com/gallery/templates/forms/employment-application/" />
+<parameter name ="pageLaodTimeOut" value ="10" />
+<parameter name ="implicitWaitTimeOut" value ="10" />
+
+	<test name="MyTest"   >
+    	<packages>
+      		<package name="ramesh.framework.tests" />
+   		</packages>
+ 	</test>
+</suite>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Suite">
+
+<parameter name="objectMapFile"
+		value="C:/WS/Java/test/Resources/propertiesFile.properties" />
+		
+	<parameter name="testDataFile"
+		value="/test/Resources/dataFile.xlsx" />
+	<parameter name="browser"
+		value="C:/Program Files/Mozilla Firefox/firefox.exe" />
+		
+	<parameter name="profile"
+		value="C:/Users/1023524/AppData/Local/Mozilla/Firefox/Profiles/vwig3zvq.Selenium" />
+		
+	<parameter name="chromeDriver" value="C:/WS/Automation/AA_Libraries/chromedriver_linux32" />
+	
+	<parameter name="url"
+		value="http:/www.wufoo.com/gallery/templates/forms/employment-application/" />
+		
+	<parameter name="pageLaodTimeOut" value="10" />
+	
+	<parameter name="implicitWaitTimeOut" value="10" />
+	
+	<test name="MyTest">
+	
+		<packages>
+			<package name="ramesh.framework.tests" />
+		</packages>
+		
+		</test>
+		
+	<!--test name="MyTest2"> 
+	<classes> <class name="testng.TestNGTest" /> 
+	<class name="testng.TestNGTest2" /> </classes>
+	<groups> <run> <include name="sanity"/> 
+	<include name="regression" /> 
+	<include name="other" /> 
+	</run>
+	 </groups> 
+	</test -->
+		
+  <test name="Test">
+    <classes>
+      <class name="MyTestNG.NewTest"/>
+    </classes>
+    
+  </test>
+</suite>
